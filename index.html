@@ -48,21 +48,11 @@
                             <h4>Mutation Rate</h4>
                             <select class="custom-select" id="mutation_rate_id"
                                 oninput="javascript: newMutationRate = parseFloat(this.value); start();">
-                                <option selected value="0.01">0.01</option>
-                                <option value="0.05">0.05</option>
-                                <option value="0.08">0.08</option>
-                                <option value="0.1">0.1</option>
-                                <option value="0.3">0.3</option>
-                                <option value="0.9">0.9</option>
-                                <option value="2.9">2.9</option>
-                                <option value="4.9">4.9</option>
-                                <option value="6.9">6.9</option>
-                                <option value="16.9">16.9</option>
-                                <option value="36.9">36.9</option>
-                                <option value="56.9">56.9</option>
-                                <option value="76.9">76.9</option>
-                                <option value="96.9">96.9</option>
-                                <option value="99.9">99.9</option>
+                                <option selected value="0.01">1%</option>
+                                <option value="0.05">5%</option>
+                                <option value="0.1">10%</option>
+                                <option value="0.3">30%</option>
+                                <option value="0.9">90%</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -91,10 +81,9 @@
                 </div>
             </div>
         </div>
-        <img src="./assets/images/map.svg" class="d-none" id="map_img_id">
         <center>
             <!-- Canvas with map image  -->
-            <canvas class="shadow mt-3 mb-0" height="500" width="920" id="myCanvas"></canvas>
+            <canvas style="background: url('assets/images/map.png');" class="shadow mt-3 mb-0" height="500" width="920" id="myCanvas"></canvas>
         </center>
         <div class="col-md-6 offset-md-3" style="margin-top: -60px;">
             <div class="card shadow-sm">

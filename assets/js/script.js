@@ -194,7 +194,7 @@ function displayShortPath() {
     for (let i = 0; i < order.length - 1; i++) {
         ctx.beginPath();
         ctx.lineWidth = 6;
-        ctx.strokeStyle = "#efefef";
+        ctx.strokeStyle = "#a3a3a3";
         ctx.moveTo(cities[shortPath[i]].Pos[0], cities[shortPath[i]].Pos[1]);
         ctx.lineTo(cities[shortPath[i + 1]].Pos[0], cities[shortPath[i + 1]].Pos[1]);
         ctx.stroke();
@@ -234,15 +234,12 @@ function start() {
 
 }
 
-window.requestAnimationFrame(draw);
+draw();
 
 // Draw function.
 function draw() {
     ctx.globalCompositeOperation = 'destination-over';
     ctx.clearRect(0, 0, canvas.width, canvas.height); 
-    // Draw map image on canvas.
-    var img = document.getElementById("map_img_id");
-    ctx.drawImage(img, 0, 0);
     // Show cities on map.
     showCities();
     if (startAlgo == true) {
